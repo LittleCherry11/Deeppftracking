@@ -51,16 +51,22 @@ def main(args):
     pred_hist=[]#(x1,y1,x2,y2)
     reinit=0
     nFrame=np.minimum(nFrame,gt_boxes.shape[0])
-
+    init_id=False
+    id_shift=0
     for id in np.arange(0,nFrame):#nFrame
         frame_name = "img/%04d.jpg" % (id + 1)
         print "Start processing: %s" % frame_name
         frame_path = os.path.join(dataset_path, sequence, sequence,frame_name)
+        if os.path.exists(frame_path)==False:
+           id_shift=id_shift+1
+           continue
+        id=id-id_shift
         frame_data = caffe.io.load_image(frame_path)  # (432,576,3), in [0,1]
         gt_box=gt_boxes[id]
 
 
-        if id == 0:
+        if init_id == False:#id==0
+            #init_id=True
             h,w,c = frame_data.shape
             frame_shape = [c, w, h]
             fps = 20
@@ -454,9 +460,11 @@ def main(args):
         frame_data_cv = frame_data_cv.astype('uint8')
         #cv2.rectangle(frame_data_cv, (int(gt_box[0]), int(gt_box[1])), (int(gt_box[2]), int(gt_box[3])),
          #                         (255, 0, 0), 2, 1)
-        if id>0:
+        if id>0 and init_id==True:
             cv2.rectangle(frame_data_cv, (int(pred_box[0,0]), int(pred_box[0,1])), (int(pred_box[0,2]), int(pred_box[0,3])),
                           (0, 255, 0), 2, 1)
+        if init_id==False:
+           init_id=True
         show_particles = False
         if show_particles:
             for i in range(filter.num_particles):
