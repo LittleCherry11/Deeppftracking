@@ -268,7 +268,7 @@ def main(args):
                 fail_times=0
                 continue
 
-            filter.predict_particles(Q=0.02,cr=0.05,ca=0.1)#0.02,0.05,0.1
+            filter.predict_particles(Q=0.2,cr=0.005,ca=0.001)#0.02,0.05,0.1
             filter.restrict_particles(w,h)
             area_hist.append(filter.cur_a)
             #compute conf
@@ -515,7 +515,7 @@ def main(args):
     print "Auc of success is: %f"%auc_iou
     print "Reinit times: %d"%reinit
     print "Average FPS: %f" % ((id+1) / (end_time - start_time))
-
+    #vggnet.net.save("vgg16_conv3.caffemodel")
 
 
 if __name__=='__main__':
@@ -533,8 +533,8 @@ if __name__=='__main__':
     #parser.add_argument("--caffemodel", default='densenet/DenseNet_121.caffemodel', type=str)
     #parser.add_argument("--prototxt",default='darknet53_align.prototxt',type=str)
     #parser.add_argument("--caffemodel",default='yolov3.caffemodel',type=str)
-    parser.add_argument("--sequence", default="Car24", type=str)
+    parser.add_argument("--sequence", default="Dog1", type=str)
     parser.add_argument("--classifier", default='svm', type=str)
-    parser.add_argument("--particles", default=256, type=int)
+    parser.add_argument("--particles", default=100, type=int)#256
     args = parser.parse_args()
     main(args)
