@@ -28,7 +28,7 @@ class VGGnet:
         self.net.blobs['rois'].reshape(nbox,nelem)
         self.net.reshape()
         #print "Image Size: ",w,h
-        self.net.blobs['im_info'].data[...]=[c,h,w]
+        #self.net.blobs['im_info'].data[...]=[c,h,w]
         self.transformer=caffe.io.Transformer({'data':self.net.blobs['data'].data.shape})
         self.transformer.set_transpose('data',(2,0,1))#move channels to the outermost dimension
         mu_channel=np.array([103.993,116.561,122.598],dtype=float).reshape((3,1))#compute in ILSVRC12 224
