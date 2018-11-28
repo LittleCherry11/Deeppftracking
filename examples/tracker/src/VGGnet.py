@@ -7,7 +7,7 @@ class VGGnet:
     def __init__(self,model_def,model_weight):
         self.model_def=model_def
         self.model_weight=model_weight
-        self.device=0#1
+        self.device=3#1,5
         print "Set_mode_gpu()..."
         caffe.set_mode_gpu()
         print "Set_device()..."
@@ -67,6 +67,58 @@ class VGGnet:
                 f = map(lambda x: x.squeeze(), f)
                 f5 = f5 + f
         self.f3=np.array(f3).reshape((nbox,-1))#(nbox,256*7*7)
+        #self.f3=np.array(f3)
+        self.f4=np.array(f4).reshape((nbox,-1))
+        self.f5=np.array(f5).reshape((nbox,-1))
+        res={'f3':self.f3,'f4':self.f4,'f5':self.f5}
+        save=False
+        if save:
+            np.save('frame_%d.npy'%id,res)
+        return res
+    def get_features_first_id(self,img,boxes_raw,id):
+        '''
+        img:(N,H,W,C)
+        img=caffe.io.load_image('path'), boxes:(nbox,4),already be restricted, id: frame id
+        '''
+        transformed_frame=[]
+        for i in np.arange(img.shape[0]):
+           transformed_frame.append(self.transformer.preprocess('data',img[i].copy()))
+        transformed_frame=np.stack(transformed_frame,axis=0)
+        print "img: ",img.shape
+        #transformed_frame=self.transformer.preprocess('data',img)
+        print "transformed_frame: ",transformed_frame.shape
+        #transformed_frame=transformed_frame-self.mu_channel#have already add set_mean in transformer
+
+        self.net.blobs['data'].data[...]=transformed_frame
+        boxes=np.zeros((boxes_raw.shape[0],boxes_raw.shape[1]+1))
+        boxes[:,1:]=boxes_raw
+        boxes[:,0]=id
+        self.net.blobs['rois'].data[...]=boxes
+        nbox=boxes.shape[0]
+        print "Start doing forward..."
+        output=self.net.forward()
+        print "Finish doing forward"
+        f3=[]
+        f4=[]
+        f5=[]
+
+        for k,v in output.items():
+            if k=='feature3':
+                f=np.split(v,v.shape[0],axis=0)
+                f=map(lambda x:x.squeeze(),f)
+                print f[0].shape
+                f3=f3+f#[f0,f1,f2,...]
+            if k == 'feature4':
+                f = np.split(v, v.shape[0], axis=0)
+                f = map(lambda x: x.squeeze(), f)
+                f4 = f4 + f
+            if k == 'feature5':
+                f = np.split(v, v.shape[0], axis=0)
+                f = map(lambda x: x.squeeze(), f)
+                f5 = f5 + f
+        #print np.array(f3).shape
+        self.f3=np.array(f3).reshape((nbox,-1))#(nbox,256*7*7)
+        #print self.f3.shape
         self.f4=np.array(f4).reshape((nbox,-1))
         self.f5=np.array(f5).reshape((nbox,-1))
         res={'f3':self.f3,'f4':self.f4,'f5':self.f5}
@@ -145,7 +197,102 @@ class VGGnet:
         if save:
             np.save('frame_%d.npy' % id, res)
         return res
+    def get_features(self,name,img,boxes_raw):
+        '''img=caffe.io.load_image('path'), boxes:(nbox,4),already be restricted, id: frame id'''
+        transformed_frame=self.transformer.preprocess('data',img)
+        #transformed_frame=transformed_frame-self.mu_channel#have already add set_mean in transformer
 
+        self.net.blobs['data'].data[...]=transformed_frame
+        boxes=np.zeros((boxes_raw.shape[0],boxes_raw.shape[1]+1))
+        boxes[:,1:]=boxes_raw
+        self.net.blobs['rois'].data[...]=boxes
+        nbox=boxes.shape[0]
+        print "Start doing forward..."
 
+        output=self.net.forward()
+        print "Finish doing forward"
+        if name not in self.net.blobs.keys():
+            print "Not find %s in NET"%name
+            return
+        else:
+            feat=self.net.blobs[name].data
 
+            return feat
+    def get_features_first_sel(self,img,boxes_raw,id,sel):
+        '''img=caffe.io.load_image('path'), boxes:(nbox,4),already be restricted, id: frame id'''
+        transformed_frame=self.transformer.preprocess('data',img)
+        #transformed_frame=transformed_frame-self.mu_channel#have already add set_mean in transformer
 
+        self.net.blobs['data'].data[...]=transformed_frame
+        boxes=np.zeros((boxes_raw.shape[0],boxes_raw.shape[1]+1))
+        boxes[:,1:]=boxes_raw
+        self.net.blobs['rois'].data[...]=boxes
+        nbox=boxes.shape[0]
+        print "Start doing forward..."
+        output=self.net.forward()
+        print "Finish doing forward"
+        f3=[]
+        f4=[]
+        f5=[]
+
+        for k,v in output.items():
+            if k=='feature3':
+                print v.shape
+                v=v[:,sel,:,:]
+                f=np.split(v,v.shape[0],axis=0)
+                f=map(lambda x:x.squeeze(),f)
+
+                f3=f3+f#[f0,f1,f2,...]
+            if k == 'feature4':
+                f = np.split(v, v.shape[0], axis=0)
+                f = map(lambda x: x.squeeze(), f)
+                f4 = f4 + f
+            if k == 'feature5':
+                f = np.split(v, v.shape[0], axis=0)
+                f = map(lambda x: x.squeeze(), f)
+                f5 = f5 + f
+        self.f3=np.array(f3).reshape((nbox,-1))#(nbox,256*7*7)
+        self.f4=np.array(f4).reshape((nbox,-1))
+        self.f5=np.array(f5).reshape((nbox,-1))
+        res={'f3':self.f3,'f4':self.f4,'f5':self.f5}
+        save=False
+        if save:
+            np.save('frame_%d.npy'%id,res)
+        return res
+    def get_features_second_sel(self,boxes_raw,id,sel):
+        '''img=caffe.io.load_image('path'), boxes:(nbox,4),already be restricted, id: frame id'''
+        #transformed_frame = self.transformer.preprocess('data', img)
+        # transformed_frame=transformed_frame-self.mu_channel#have already add set_mean in transformer
+
+        #self.net.blobs['data'].data[...] = transformed_frame
+        boxes = np.zeros((boxes_raw.shape[0], boxes_raw.shape[1] + 1))
+        boxes[:, 1:] = boxes_raw
+        self.net.blobs['rois'].data[...] = boxes
+        nbox = boxes.shape[0]
+        output = self.net.forward(start='roi_pool3')
+        f3 = []
+        f4 = []
+        f5 = []
+
+        for k, v in output.items():
+            if k == 'feature3':
+                v = v[:, sel, :, :]
+                f = np.split(v, v.shape[0], axis=0)
+                f = map(lambda x: x.squeeze(), f)
+                f3 = f3 + f  # [f0,f1,f2,...]
+            if k == 'feature4':
+                f = np.split(v, v.shape[0], axis=0)
+                f = map(lambda x: x.squeeze(), f)
+                f4 = f4 + f
+            if k == 'feature5':
+                f = np.split(v, v.shape[0], axis=0)
+                f = map(lambda x: x.squeeze(), f)
+                f5 = f5 + f
+        self.f3 = np.array(f3).reshape((nbox, -1))  # (nbox,256*7*7)
+        self.f4 = np.array(f4).reshape((nbox, -1))
+        self.f5 = np.array(f5).reshape((nbox, -1))
+        res = {'f3': self.f3, 'f4': self.f4, 'f5': self.f5}
+        save = False
+        if save:
+            np.save('frame_%d.npy' % id, res)
+        return res

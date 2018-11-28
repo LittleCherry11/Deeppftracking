@@ -231,7 +231,26 @@ class PFfilter:
         else:
             state_half = utils.bbox_to_states(bboxes, self.area, self.ratio)
         self.particles[:, :4] = state_half[:, :4]
-
+    def restrict_particles_extern(self,states,w,h):
+        if self.mltply:
+            bboxes = utils.state_to_bbox_m(states, self.area, self.ratio)
+        else:
+            bboxes = utils.state_to_bbox(states, self.area, self.ratio)
+        # restrict x1,y1,x2,y2
+        # bboxes[:, 0] = np.minimum(np.maximum(0, bboxes[:, 0]), w)
+        # bboxes[:, 2] = np.minimum(np.maximum(0, bboxes[:, 2]), w)
+        # bboxes[:, 1] = np.minimum(np.maximum(0, bboxes[:, 1]), h)
+        # bboxes[:, 3] = np.minimum(np.maximum(0, bboxes[:, 3]), h)
+        if self.mltply:
+            bboxes = utils.restrict_box_m(bboxes, w, h)
+        else:
+            bboxes = utils.restrict_box(bboxes, w, h)
+        # prev_particles= self.particles
+        if self.mltply:
+            state_half = utils.bbox_to_states_m(bboxes, self.area, self.ratio)
+        else:
+            state_half = utils.bbox_to_states(bboxes, self.area, self.ratio)
+        return state_half
     def update_particles(self, conf):
         '''set weights according to the conf: p(y_t|x_t)'''
         # print 'conf is: ',conf
@@ -246,7 +265,9 @@ class PFfilter:
         cur_pos = np.zeros((6,), dtype=np.float32)
         # there are two methods to estimating cur_pos: average or max
         # avreage
-        cur_pos = np.average(self.particles, weights=self.weights.squeeze(), axis=0)  # (cx,cy,s,r,dcx,dcy)
+        maxw = np.max(self.weights)
+        inds = np.where(self.weights>0.5*maxw)[0]
+        cur_pos = np.average(self.particles[inds], weights=self.weights.squeeze()[inds], axis=0)  # (cx,cy,s,r,dcx,dcy)
 
         # max
         # cur_pos = self.particles[np.argmax(self.weights)]
@@ -344,6 +365,18 @@ class PFfilter:
         eff = 1. / np.sum(np.square(self.weights))
         # print 'eff is ', eff
         return eff
+    def estimate_const(self,conf,k=10):
+        cur_pos = np.zeros((6,), dtype=np.float32)
+
+        # avreage
+        cur_pos = np.average(self.particles, weights=conf, axis=0)  # (cx,cy,s,r,dcx,dcy)
+
+        if self.mltply:
+            cur_pos = utils.state_to_bbox_m(cur_pos, self.area, self.ratio)
+        else:
+            cur_pos = utils.state_to_bbox(cur_pos, self.area, self.ratio)
+        cur_pos = utils.restrict_box(cur_pos, self.width, self.height)
+        return cur_pos
 
     def resample(self, method='residual_resample'):
         '''
@@ -436,8 +469,8 @@ class PFfilter:
             sample_times += 1
             if sample_times >= 200:  # and cur_n>N/2.0:#100
                 # print "Caution: too many loops in sampling"
-                break
-                #raise OverflowError()
+                #break
+                raise OverflowError()
         if cur_n >= N:
             sample_boxN = np.vstack(sample_boxN)[:N, :]
             sample_iouN = np.vstack(sample_iouN)[:N, :]

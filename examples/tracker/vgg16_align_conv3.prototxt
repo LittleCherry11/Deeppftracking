@@ -1,72 +1,24 @@
 name: "VGG_ILSVRC_16_layers"
-layer{
-  name:"input0"
-  type:"Input"
-  top:"data"
-  include{
-    phase: TEST
-  }
-  input_param{
-     shape{
-         dim: 1
-         dim: 3
-         dim: 224
-         dim: 224
-     }
-  }
 
+input: "data"
+input_shape {
+  dim: 1
+  dim: 3
+  dim: 224
+  dim: 224
 }
-#layer{
-#  name:"input1"
-#  type:"Input"
-#  top:"im_info"
-#  include{
-#    phase: TEST
-#  }
-#  input_param{
-#     shape{
-#         dim: 1
-#         dim: 3
-#         
-#     }
-#  }
-#
-#}
-layer{
-  name:"input2"
-  type:"Input"
-  top:"rois"
-  include{
-    phase: TEST
-  }
-  input_param{
-     shape{
-         dim: 3
-         dim: 5
 
-     }
-  }
-
+input: "im_info"
+input_shape {
+  dim: 1
+  dim: 3
 }
-#input: "data"
-#input_shape {
-#  dim: 1
-#  dim: 3
-#  dim: 224
-#  dim: 224
-#}
 
-#input: "im_info"
-#input_shape {
-#  dim: 1
-#  dim: 3
-#}
-
-#input: "rois"
-#input_shape{
-#    dim: 3
-#    dim: 5
-#}
+input: "rois"
+input_shape{
+    dim: 3
+    dim: 5
+}
 
 
 layer {
@@ -290,5 +242,18 @@ layer {
     spatial_scale: 0.25 # 1/4
     sampling_ratio: 4
   }
+#layer {
+#  name: "roi_pool3"
+#  type: "ROIPooling"
+#  bottom: "conv3_3"
+#  bottom: "rois"
+#  top: "feature3"
+#  roi_pooling_param {
+#    pooled_w: 7
+#    pooled_h: 7
+#    spatial_scale: 0.25 # 1/4
+#    #sampling_ratio: 4
+#  }
+
 }
 

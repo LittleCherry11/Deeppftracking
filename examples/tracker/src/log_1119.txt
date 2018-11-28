@@ -1,0 +1,874 @@
+Test round: 0
+Processing: Bird2
+Total frames are: 99
+Image Size: 720 400
+Average FPS: 1.540882
+Precision @20 is: 1.000000
+Auc of Precision is: 0.909495
+Auc of Success is: 0.833725
+Reinit times: 1
+PCA components: 201
+Processing: BlurCar1
+Total frames are: 742
+Image Size: 640 480
+Average FPS: 1.436223
+Precision @20 is: 0.991914
+Auc of Precision is: 0.905984
+Auc of Success is: 0.788038
+Reinit times: 1
+PCA components: 259
+Processing: BlurCar3
+Total frames are: 357
+Image Size: 640 480
+Average FPS: 1.471715
+Precision @20 is: 0.974790
+Auc of Precision is: 0.877255
+Auc of Success is: 0.762682
+Reinit times: 0
+PCA components: 245
+Processing: BlurCar4
+Total frames are: 380
+Image Size: 640 480
+Average FPS: 1.378854
+Precision @20 is: 0.997368
+Auc of Precision is: 0.890000
+Auc of Success is: 0.836255
+Reinit times: 0
+PCA components: 380
+Processing: Board
+Total frames are: 698
+Image Size: 640 480
+Average FPS: 1.377448
+Precision @20 is: 0.508596
+Auc of Precision is: 0.475960
+Auc of Success is: 0.552708
+Reinit times: 0
+PCA components: 282
+Processing: Bolt2
+Total frames are: 293
+Image Size: 480 270
+Average FPS: 1.731404
+Precision @20 is: 0.962457
+Auc of Precision is: 0.824369
+Auc of Success is: 0.598653
+Reinit times: 1
+PCA components: 223
+Processing: Boy
+Total frames are: 602
+Image Size: 640 480
+Average FPS: 1.524287
+Precision @20 is: 1.000000
+Auc of Precision is: 0.942625
+Auc of Success is: 0.759691
+Reinit times: 0
+PCA components: 105
+Processing: Car2
+Total frames are: 913
+Image Size: 320 240
+Average FPS: 1.705062
+Precision @20 is: 1.000000
+Auc of Precision is: 0.933209
+Auc of Success is: 0.684992
+Reinit times: 0
+PCA components: 178
+Processing: Car24
+Total frames are: 3059
+Image Size: 320 240
+Average FPS: 1.712488
+Precision @20 is: 1.000000
+Auc of Precision is: 0.877725
+Auc of Success is: 0.434986
+Reinit times: 0
+PCA components: 85
+Processing: Coke
+Total frames are: 291
+Image Size: 640 480
+Average FPS: 1.526246
+Precision @20 is: 0.841924
+Auc of Precision is: 0.670584
+Auc of Success is: 0.501422
+Reinit times: 1
+PCA components: 154
+Processing: Coupon
+Total frames are: 327
+Image Size: 320 240
+Average FPS: 1.652637
+Precision @20 is: 0.391437
+Auc of Precision is: 0.376697
+Auc of Success is: 0.358227
+Reinit times: 0
+PCA components: 203
+Processing: Crossing
+Total frames are: 120
+Image Size: 360 240
+Average FPS: 1.711613
+Precision @20 is: 1.000000
+Auc of Precision is: 0.962833
+Auc of Success is: 0.697645
+Reinit times: 0
+PCA components: 88
+Processing: Dancer
+Total frames are: 225
+Image Size: 320 246
+Average FPS: 1.645080
+Precision @20 is: 1.000000
+Auc of Precision is: 0.845956
+Auc of Success is: 0.646482
+Reinit times: 0
+PCA components: 206
+Processing: Dancer2
+Total frames are: 150
+Image Size: 320 262
+Average FPS: 1.732665
+Precision @20 is: 1.000000
+Auc of Precision is: 0.893733
+Auc of Success is: 0.783707
+Reinit times: 0
+PCA components: 188
+Processing: David2
+Total frames are: 537
+Image Size: 320 240
+Average FPS: 1.749824
+Precision @20 is: 1.000000
+Auc of Precision is: 0.954898
+Auc of Success is: 0.779112
+Reinit times: 0
+PCA components: 118
+Processing: David3
+Total frames are: 252
+Image Size: 640 480
+Average FPS: 1.451257
+Precision @20 is: 1.000000
+Auc of Precision is: 0.929206
+Auc of Success is: 0.768372
+Reinit times: 0
+PCA components: 214
+Processing: Dog
+Total frames are: 127
+Image Size: 352 240
+Average FPS: 1.894019
+Precision @20 is: 1.000000
+Auc of Precision is: 0.908819
+Auc of Success is: 0.547485
+Reinit times: 1
+PCA components: 220
+Processing: Dog1
+Total frames are: 1350
+Image Size: 320 240
+Average FPS: 1.712382
+Precision @20 is: 0.926667
+Auc of Precision is: 0.856682
+Auc of Success is: 0.532408
+Reinit times: 0
+PCA components: 168
+Processing: Doll
+Total frames are: 3872
+Image Size: 400 300
+Average FPS: 1.646709
+Precision @20 is: 0.972624
+Auc of Precision is: 0.924070
+Auc of Success is: 0.579558
+Reinit times: 1
+PCA components: 187
+Processing: FaceOcc1
+Total frames are: 892
+Image Size: 352 288
+Average FPS: 1.595744
+Precision @20 is: 0.882287
+Auc of Precision is: 0.738946
+Auc of Success is: 0.781534
+Reinit times: 0
+PCA components: 270
+Processing: FaceOcc2
+Total frames are: 812
+Image Size: 320 240
+Average FPS: 1.669983
+Precision @20 is: 0.923645
+Auc of Precision is: 0.831946
+Auc of Success is: 0.731562
+Reinit times: 0
+PCA components: 313
+Processing: Fish
+Total frames are: 476
+Image Size: 320 240
+Average FPS: 1.633032
+Precision @20 is: 1.000000
+Auc of Precision is: 0.931176
+Auc of Success is: 0.839312
+Reinit times: 0
+PCA components: 239
+Processing: FleetFace
+Total frames are: 707
+Image Size: 720 480
+Average FPS: 1.377072
+Precision @20 is: 0.660537
+Auc of Precision is: 0.673805
+Auc of Success is: 0.655204
+Reinit times: 0
+PCA components: 244
+Processing: Football1
+Total frames are: 81
+Image Size: 352 288
+Average FPS: 1.983740
+Precision @20 is: 1.000000
+Auc of Precision is: 0.891622
+Auc of Success is: 0.631222
+Reinit times: 0
+PCA components: 142
+Processing: Freeman1
+Total frames are: 326
+Image Size: 360 240
+Average FPS: 1.824167
+Precision @20 is: 0.993865
+Auc of Precision is: 0.841411
+Auc of Success is: 0.410967
+Reinit times: 0
+PCA components: 60
+Processing: Freeman3
+Total frames are: 474
+Image Size: 360 240
+Average FPS: 1.854729
+Precision @20 is: 0.882609
+Auc of Precision is: 0.868174
+Auc of Success is: 0.432098
+Reinit times: 1
+PCA components: 43
+Processing: Girl2
+Total frames are: 1500
+Image Size: 640 480
+Average FPS: 1.440837
+Precision @20 is: 0.932667
+Auc of Precision is: 0.815733
+Auc of Success is: 0.644630
+Reinit times: 3
+PCA components: 199
+Processing: Gym
+Total frames are: 767
+Image Size: 426 234
+Average FPS: 1.682152
+Precision @20 is: 0.735332
+Auc of Precision is: 0.707849
+Auc of Success is: 0.455368
+Reinit times: 0
+PCA components: 151
+Processing: Human2
+Total frames are: 1128
+Image Size: 480 640
+Average FPS: 1.420873
+Precision @20 is: 0.772163
+Auc of Precision is: 0.708918
+Auc of Success is: 0.658469
+Reinit times: 1
+PCA components: 300
+Processing: Human5
+Total frames are: 713
+Image Size: 480 640
+Average FPS: 1.526420
+Precision @20 is: 0.636746
+Auc of Precision is: 0.699102
+Auc of Success is: 0.383702
+Reinit times: 1
+PCA components: 103
+Processing: Human7
+Total frames are: 250
+Image Size: 320 240
+Average FPS: 1.724716
+Precision @20 is: 1.000000
+Auc of Precision is: 0.936640
+Auc of Success is: 0.500378
+Reinit times: 0
+PCA components: 209
+Processing: Human8
+Total frames are: 128
+Image Size: 320 240
+Average FPS: 1.757100
+Precision @20 is: 1.000000
+Auc of Precision is: 0.910469
+Auc of Success is: 0.507445
+Reinit times: 0
+PCA components: 206
+Processing: Jogging
+Total frames are: 308
+Image Size: 352 288
+Average FPS: 1.659291
+Precision @20 is: 0.885993
+Auc of Precision is: 0.833160
+Auc of Success is: 0.680791
+Reinit times: 2
+PCA components: 169
+Processing: KiteSurf
+Total frames are: 84
+Image Size: 480 270
+Average FPS: 1.731850
+Precision @20 is: 0.952381
+Auc of Precision is: 0.923810
+Auc of Success is: 0.727843
+Reinit times: 1
+PCA components: 119
+Processing: Lemming
+Total frames are: 1336
+Image Size: 640 480
+Average FPS: 1.440644
+Precision @20 is: 0.497754
+Auc of Precision is: 0.461168
+Auc of Success is: 0.400381
+Reinit times: 1
+PCA components: 245
+Processing: Man
+Total frames are: 134
+Image Size: 241 193
+Average FPS: 1.711872
+Precision @20 is: 1.000000
+Auc of Precision is: 0.981194
+Auc of Success is: 0.891387
+Reinit times: 0
+PCA components: 117
+Processing: Mhyang
+Total frames are: 1490
+Image Size: 320 240
+Average FPS: 1.638904
+Precision @20 is: 1.000000
+Auc of Precision is: 0.956443
+Auc of Success is: 0.804627
+Reinit times: 0
+PCA components: 219
+Processing: MountainBike
+Total frames are: 228
+Image Size: 640 360
+Average FPS: 1.538333
+Precision @20 is: 1.000000
+Auc of Precision is: 0.836579
+Auc of Success is: 0.691761
+Reinit times: 0
+PCA components: 182
+Processing: Rubik
+Total frames are: 1997
+Image Size: 640 480
+Average FPS: 1.413445
+Precision @20 is: 0.616925
+Auc of Precision is: 0.677176
+Auc of Success is: 0.583811
+Reinit times: 1
+PCA components: 245
+Processing: Singer1
+Total frames are: 351
+Image Size: 624 352
+Average FPS: 1.514296
+Precision @20 is: 0.464387
+Auc of Precision is: 0.542450
+Auc of Success is: 0.382942
+Reinit times: 0
+PCA components: 269
+Processing: Skater
+Total frames are: 160
+Image Size: 320 240
+Average FPS: 1.780574
+Precision @20 is: 0.987500
+Auc of Precision is: 0.873625
+Auc of Success is: 0.680160
+Reinit times: 1
+PCA components: 198
+Processing: Skater2
+Total frames are: 435
+Image Size: 320 262
+Average FPS: 1.757773
+Precision @20 is: 0.655172
+Auc of Precision is: 0.685931
+Auc of Success is: 0.599331
+Reinit times: 2
+PCA components: 203
+Processing: Subway
+Total frames are: 176
+Image Size: 352 288
+Average FPS: 1.677315
+Precision @20 is: 1.000000
+Auc of Precision is: 0.945829
+Auc of Success is: 0.742290
+Reinit times: 0
+PCA components: 127
+Processing: Suv
+Total frames are: 945
+Image Size: 320 240
+Average FPS: 1.636376
+Precision @20 is: 0.973545
+Auc of Precision is: 0.921122
+Auc of Success is: 0.851138
+Reinit times: 4
+PCA components: 232
+Processing: Tiger1
+Total frames are: 354
+Image Size: 640 480
+Average FPS: 1.478949
+Precision @20 is: 0.858757
+Auc of Precision is: 0.763164
+Auc of Success is: 0.698711
+Reinit times: 2
+PCA components: 278
+Processing: Toy
+Total frames are: 271
+Image Size: 320 240
+Average FPS: 1.798832
+Precision @20 is: 0.811808
+Auc of Precision is: 0.775720
+Auc of Success is: 0.558002
+Reinit times: 2
+PCA components: 238
+Processing: Trans
+Total frames are: 124
+Image Size: 640 332
+Average FPS: 1.707104
+Precision @20 is: 0.362903
+Auc of Precision is: 0.436452
+Auc of Success is: 0.629362
+Reinit times: 1
+PCA components: 244
+Processing: Twinnings
+Total frames are: 472
+Image Size: 320 240
+Average FPS: 1.628804
+Precision @20 is: 0.997881
+Auc of Precision is: 0.873220
+Auc of Success is: 0.565894
+Reinit times: 1
+PCA components: 257
+Processing: Vase
+Total frames are: 271
+Image Size: 320 240
+Average FPS: 1.613203
+Precision @20 is: 0.800738
+Auc of Precision is: 0.736236
+Auc of Success is: 0.609629
+Reinit times: 1
+PCA components: 193
+Processing: Basketball
+Total frames are: 725
+Image Size: 576 432
+Average FPS: 1.373231
+Precision @20 is: 0.895172
+Auc of Precision is: 0.828055
+Auc of Success is: 0.731044
+Reinit times: 1
+PCA components: 229
+Processing: Bird1
+Total frames are: 408
+Image Size: 720 400
+Average FPS: 1.613187
+Precision @20 is: 0.502451
+Auc of Precision is: 0.490931
+Auc of Success is: 0.312758
+Reinit times: 6
+PCA components: 90
+Processing: BlurBody
+Total frames are: 334
+Image Size: 640 480
+Average FPS: 1.307156
+Precision @20 is: 0.907186
+Auc of Precision is: 0.798263
+Auc of Success is: 0.721732
+Reinit times: 0
+PCA components: 262
+Processing: BlurCar2
+Total frames are: 585
+Image Size: 640 480
+Average FPS: 1.393502
+Precision @20 is: 0.991453
+Auc of Precision is: 0.906974
+Auc of Success is: 0.763766
+Reinit times: 0
+PCA components: 284
+Processing: BlurFace
+Total frames are: 493
+Image Size: 640 480
+Average FPS: 1.419837
+Precision @20 is: 0.987830
+Auc of Precision is: 0.869331
+Auc of Success is: 0.809990
+Reinit times: 0
+PCA components: 280
+Processing: BlurOwl
+Total frames are: 631
+Image Size: 640 480
+Average FPS: 1.552930
+Precision @20 is: 0.908082
+Auc of Precision is: 0.823391
+Auc of Success is: 0.738315
+Reinit times: 7
+PCA components: 207
+Processing: Bolt
+Total frames are: 350
+Image Size: 640 360
+Average FPS: 1.636827
+Precision @20 is: 0.834286
+Auc of Precision is: 0.734857
+Auc of Success is: 0.598782
+Reinit times: 1
+PCA components: 168
+Processing: Box
+Total frames are: 1161
+Image Size: 640 480
+Average FPS: 1.449874
+Precision @20 is: 0.404823
+Auc of Precision is: 0.351628
+Auc of Success is: 0.343254
+Reinit times: 1
+PCA components: 256
+Processing: Car1
+Total frames are: 1020
+Image Size: 320 240
+Average FPS: 1.718637
+Precision @20 is: 0.877451
+Auc of Precision is: 0.820627
+Auc of Success is: 0.226410
+Reinit times: 1
+PCA components: 187
+Processing: Car4
+Total frames are: 659
+Image Size: 360 240
+Average FPS: 1.597097
+Precision @20 is: 1.000000
+Auc of Precision is: 0.913354
+Auc of Success is: 0.507659
+Reinit times: 0
+PCA components: 267
+Processing: CarDark
+Total frames are: 393
+Image Size: 320 240
+Average FPS: 1.682308
+Precision @20 is: 1.000000
+Auc of Precision is: 0.966565
+Auc of Success is: 0.810315
+Reinit times: 0
+PCA components: 135
+Processing: CarScale
+Total frames are: 252
+Image Size: 640 272
+Average FPS: 1.642609
+Precision @20 is: 0.690476
+Auc of Precision is: 0.640635
+Auc of Success is: 0.514733
+Reinit times: 1
+PCA components: 104
+Processing: ClifBar
+Total frames are: 472
+Image Size: 320 240
+Average FPS: 1.757823
+Precision @20 is: 0.792373
+Auc of Precision is: 0.759703
+Auc of Success is: 0.462475
+Reinit times: 2
+PCA components: 162
+Processing: Couple
+Total frames are: 140
+Image Size: 320 240
+Average FPS: 1.941583
+Precision @20 is: 0.842857
+Auc of Precision is: 0.792571
+Auc of Success is: 0.591933
+Reinit times: 4
+PCA components: 180
+Processing: Crowds
+Total frames are: 347
+Image Size: 600 480
+Average FPS: 1.541955
+Precision @20 is: 1.000000
+Auc of Precision is: 0.924611
+Auc of Success is: 0.710553
+Reinit times: 0
+PCA components: 130
+Processing: David
+Total frames are: 471
+Image Size: 320 240
+Average FPS: 1.668483
+Precision @20 is: 0.989384
+Auc of Precision is: 0.887006
+Auc of Success is: 0.540573
+Reinit times: 0
+PCA components: 256
+Processing: Deer
+Total frames are: 71
+Image Size: 704 400
+Average FPS: 1.546687
+Precision @20 is: 1.000000
+Auc of Precision is: 0.916901
+Auc of Success is: 0.749222
+Reinit times: 0
+PCA components: 267
+Processing: Diving
+Total frames are: 231
+Image Size: 400 224
+Average FPS: 2.039103
+Precision @20 is: 0.437209
+Auc of Precision is: 0.440093
+Auc of Success is: 0.347053
+Reinit times: 4
+PCA components: 179
+Processing: DragonBaby
+Total frames are: 113
+Image Size: 640 360
+Average FPS: 1.739024
+Precision @20 is: 0.884956
+Auc of Precision is: 0.793451
+Auc of Success is: 0.650134
+Reinit times: 5
+PCA components: 220
+Processing: Dudek
+Total frames are: 1145
+Image Size: 720 480
+Average FPS: 1.306395
+Precision @20 is: 0.917031
+Auc of Precision is: 0.822410
+Auc of Success is: 0.744954
+Reinit times: 0
+PCA components: 285
+Processing: Football
+Total frames are: 362
+Image Size: 624 352
+Average FPS: 1.526426
+Precision @20 is: 1.000000
+Auc of Precision is: 0.885193
+Auc of Success is: 0.662679
+Reinit times: 1
+PCA components: 165
+Processing: Freeman4
+Total frames are: 297
+Image Size: 360 240
+Average FPS: 1.862359
+Precision @20 is: 0.989399
+Auc of Precision is: 0.919647
+Auc of Success is: 0.588112
+Reinit times: 4
+PCA components: 39
+Processing: Girl
+Total frames are: 500
+Image Size: 128 96
+Average FPS: 1.678821
+Precision @20 is: 1.000000
+Auc of Precision is: 0.961200
+Auc of Success is: 0.744043
+Reinit times: 0
+PCA components: 173
+Processing: Human3
+Total frames are: 1698
+Image Size: 480 640
+Average FPS: 1.445645
+Precision @20 is: 0.928151
+Auc of Precision is: 0.854464
+Auc of Success is: 0.572845
+Reinit times: 1
+PCA components: 157
+Processing: Human4
+Total frames are: 667
+Image Size: 640 480
+Average FPS: 1.499769
+Precision @20 is: 0.493253
+Auc of Precision is: 0.455412
+Auc of Success is: 0.351991
+Reinit times: 0
+PCA components: 107
+Processing: Human6
+Total frames are: 792
+Image Size: 480 640
+Average FPS: 1.492849
+Precision @20 is: 0.853535
+Auc of Precision is: 0.777348
+Auc of Success is: 0.523658
+Reinit times: 4
+PCA components: 126
+Processing: Human9
+Total frames are: 305
+Image Size: 320 240
+Average FPS: 1.570553
+Precision @20 is: 1.000000
+Auc of Precision is: 0.912525
+Auc of Success is: 0.413985
+Reinit times: 0
+PCA components: 231
+Processing: Ironman
+Total frames are: 166
+Image Size: 720 304
+Average FPS: 1.873705
+Precision @20 is: 0.704819
+Auc of Precision is: 0.682048
+Auc of Success is: 0.500635
+Reinit times: 9
+PCA components: 163
+Processing: Jump
+Total frames are: 122
+Image Size: 416 234
+Average FPS: 1.784355
+Precision @20 is: 0.877049
+Auc of Precision is: 0.818197
+Auc of Success is: 0.583898
+Reinit times: 7
+PCA components: 219
+Processing: Jumping
+Total frames are: 313
+Image Size: 352 288
+Average FPS: 1.636850
+Precision @20 is: 0.961661
+Auc of Precision is: 0.882939
+Auc of Success is: 0.687097
+Reinit times: 2
+PCA components: 117
+Processing: Liquor
+Total frames are: 1741
+Image Size: 640 480
+Average FPS: 1.363355
+Precision @20 is: 0.836875
+Auc of Precision is: 0.774899
+Auc of Success is: 0.710358
+Reinit times: 3
+PCA components: 227
+Processing: Matrix
+Total frames are: 100
+Image Size: 800 336
+Average FPS: 1.664141
+Precision @20 is: 0.870000
+Auc of Precision is: 0.796200
+Auc of Success is: 0.606308
+Reinit times: 2
+PCA components: 202
+Processing: MotorRolling
+Total frames are: 164
+Image Size: 640 360
+Average FPS: 1.618652
+Precision @20 is: 0.768293
+Auc of Precision is: 0.680854
+Auc of Success is: 0.572772
+Reinit times: 3
+PCA components: 280
+Processing: Panda
+Total frames are: 1000
+Image Size: 312 233
+Average FPS: 1.721891
+Precision @20 is: 0.987000
+Auc of Precision is: 0.845280
+Auc of Success is: 0.475059
+Reinit times: 0
+PCA components: 78
+Processing: RedTeam
+Total frames are: 1918
+Image Size: 352 240
+Average FPS: 1.691355
+Precision @20 is: 1.000000
+Auc of Precision is: 0.937768
+Auc of Success is: 0.511892
+Reinit times: 0
+PCA components: 98
+Processing: Shaking
+Total frames are: 365
+Image Size: 624 352
+Average FPS: 1.555049
+Precision @20 is: 0.991781
+Auc of Precision is: 0.898575
+Auc of Success is: 0.713533
+Reinit times: 5
+PCA components: 220
+Processing: Singer2
+Total frames are: 366
+Image Size: 624 352
+Average FPS: 1.502473
+Precision @20 is: 0.959016
+Auc of Precision is: 0.843989
+Auc of Success is: 0.770781
+Reinit times: 1
+PCA components: 328
+Processing: Skating1
+Total frames are: 400
+Image Size: 640 360
+Average FPS: 1.633778
+Precision @20 is: 0.977500
+Auc of Precision is: 0.869250
+Auc of Success is: 0.505472
+Reinit times: 0
+PCA components: 172
+Processing: Skating2
+Total frames are: 473
+Image Size: 640 352
+Average FPS: 1.477733
+Precision @20 is: 0.226216
+Auc of Precision is: 0.335391
+Auc of Success is: 0.258750
+Reinit times: 1
+PCA components: 249
+Processing: Skiing
+Total frames are: 81
+Image Size: 640 360
+Average FPS: 1.643245
+Precision @20 is: 1.000000
+Auc of Precision is: 0.919012
+Auc of Success is: 0.468564
+Reinit times: 0
+PCA components: 62
+Processing: Soccer
+Total frames are: 392
+Image Size: 640 360
+Average FPS: 1.606206
+Precision @20 is: 0.966837
+Auc of Precision is: 0.823010
+Auc of Success is: 0.507168
+Reinit times: 7
+PCA components: 263
+Processing: Surfer
+Total frames are: 376
+Image Size: 480 360
+Average FPS: 1.689536
+Precision @20 is: 1.000000
+Auc of Precision is: 0.865106
+Auc of Success is: 0.490205
+Reinit times: 1
+PCA components: 78
+Processing: Sylvester
+Total frames are: 1345
+Image Size: 320 240
+Average FPS: 1.662374
+Precision @20 is: 0.854275
+Auc of Precision is: 0.789086
+Auc of Success is: 0.652491
+Reinit times: 2
+PCA components: 219
+Processing: Tiger2
+Total frames are: 365
+Image Size: 640 480
+Average FPS: 1.408316
+Precision @20 is: 0.887671
+Auc of Precision is: 0.785753
+Auc of Success is: 0.687820
+Reinit times: 0
+PCA components: 256
+Processing: Trellis
+Total frames are: 569
+Image Size: 320 240
+Average FPS: 1.576754
+Precision @20 is: 1.000000
+Auc of Precision is: 0.909842
+Auc of Success is: 0.637185
+Reinit times: 0
+PCA components: 296
+Processing: Walking
+Total frames are: 412
+Image Size: 768 576
+Average FPS: 1.360306
+Precision @20 is: 0.990291
+Auc of Precision is: 0.920971
+Auc of Success is: 0.525572
+Reinit times: 0
+PCA components: 94
+Processing: Walking2
+Total frames are: 500
+Image Size: 384 288
+Average FPS: 1.583186
+Precision @20 is: 0.842000
+Auc of Precision is: 0.760280
+Auc of Success is: 0.502946
+Reinit times: 0
+PCA components: 195
+Processing: Woman
+Total frames are: 597
+Image Size: 352 288
+Average FPS: 1.614415
+Precision @20 is: 0.993300
+Auc of Precision is: 0.944858
+Auc of Success is: 0.783143
+Reinit times: 1
+PCA components: 137

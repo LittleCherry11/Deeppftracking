@@ -3,7 +3,7 @@ import  re
 import matplotlib.pyplot as plt
 from scipy.stats import  multivariate_normal
 import sklearn
-from sklearn.decomposition import PCA
+from sklearn.decomposition import PCA,KernelPCA
 
 eps=1e-10
 def get_boxes_all(gt_path):
@@ -264,9 +264,48 @@ def skl_pca(features):
         max_perfeat=np.max(features,axis=0)
 
         features=(features-min_perfeat)/(max_perfeat-min_perfeat+eps)
-    pca=PCA(n_components=0.9,svd_solver='full',whiten=False)#whiten=True,perform whiten
+    pca=PCA(n_components=0.95,svd_solver='full',whiten=False)#whiten=True,perform whiten,0.95
     pca.fit(features)
     print 'PCA components: %d'%pca.n_components_
+    #print pca.explained_variance_
+    #print pca.explained_variance_ratio_
+    return pca
+def skl_pca2(features):
+    '''do PCA using sklearn.PCA'''
+    need_norm=1  #whether should normalize first
+    if need_norm==1:
+        #mean=0,unit covariance
+        scaler=sklearn.preprocessing.StandardScaler(with_mean=True,with_std=True)
+        scaler.fit(features)
+        features=scaler.transform(features)
+        #features=sklearn.preprocessing.scale(features,axis=0,with_mean=True,with_std=True)
+    if need_norm==2:
+        #normalize  to [0,1]
+        min_perfeat=np.min(features,axis=0)
+        max_perfeat=np.max(features,axis=0)
+
+        features=(features-min_perfeat)/(max_perfeat-min_perfeat+eps)
+    pca=PCA(n_components=0.9,svd_solver='full',whiten=False)#whiten=True,perform whiten,0.9 , 'full'
+    pca.fit(features)
+    print 'PCA components: %d'%pca.n_components_
+    #print pca.explained_variance_
+    #print pca.explained_variance_ratio_
+    return pca,scaler,pca.n_components_
+def skl_pca_noscale(features):
+    '''do PCA using sklearn.PCA'''
+
+    pca=PCA(n_components=0.9,svd_solver='full',whiten=False)#whiten=True,perform whiten,0.9 , 'full',128
+    pca.fit(features)
+    print 'PCA components: %d'%pca.n_components_
+    #print pca.explained_variance_
+    #print pca.explained_variance_ratio_
+    return pca,pca.n_components_
+def skl_Kpca_noscale(features):
+    '''do PCA using sklearn.PCA'''
+
+    pca=KernelPCA(n_components=128,kernel='rbf')#whiten=True,perform whiten,0.9 , 'full',128
+    pca.fit(features)
+    #print 'PCA components: %d'%pca.n_components_
     #print pca.explained_variance_
     #print pca.explained_variance_ratio_
     return pca
